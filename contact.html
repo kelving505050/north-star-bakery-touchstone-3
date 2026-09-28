@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact and Pre-order Inquiries | North Star Bakery</title>
 <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body class="contact-page">
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -23,6 +24,15 @@
   </header>
   <main id="main-content" tabindex="-1" class="page-content">
     <h1>Contact and Pre-order Inquiries</h1>
+    <section id="favorites-panel" class="favorites-panel" aria-labelledby="favorites-heading" hidden>
+      <h2 id="favorites-heading">Your saved bakery ideas</h2>
+      <p>Use this list as a reminder when writing your inquiry. <a href="products.html#favorites-panel">Choose favorites on the products page</a>.</p>
+      <h3>Your favorites (<span id="favorites-count">0</span>)</h3>
+      <p id="favorites-empty">No favorites saved yet.</p>
+      <ul id="favorites-list"></ul>
+      <button id="clear-favorites" type="button">Clear favorites</button>
+      <p id="favorites-status" role="status" aria-live="polite"></p>
+    </section>
     <div class="contact-layout">
 <section aria-labelledby="visit-details" class="visit-card">
       <h2 id="visit-details">Location and hours</h2>
@@ -42,7 +52,8 @@
         is connected. Use sample details when testing; a real request
         would need a working submission service and bakery confirmation.</p>
       <p>Fields marked required must be completed. Pickup date is optional
-        for a general question; include it when requesting a pre-order.</p>
+        for a general question and required for a pre-order inquiry.</p>
+      <p id="form-status" role="status" aria-live="polite" tabindex="-1"></p>
       <!-- Replace the action with a working endpoint before real use. -->
       <form id="request-form" action="contact.html" method="post" aria-describedby="demo-note">
         <fieldset>

@@ -142,3 +142,19 @@ textarea { resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Touchstone 4: retain the existing palette, typography and responsive layout. */
+[hidden] { display: none !important; }
+.favorites-panel { padding: 1.5rem; border: 2px solid var(--brown); border-radius: .6rem; margin-bottom: 2rem; }
+.favorite-choices { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
+.favorite-choices article { flex: 1 1 0; min-width: 0; padding: 1rem; border: 1px solid var(--peach); border-radius: .4rem; }
+.favorite-choices button { width: 100%; }
+button[aria-pressed="true"] { background: var(--peach); color: var(--charcoal); }
+button:disabled { cursor: default; opacity: .65; }
+#favorites-status { margin-top: 1rem; font-weight: bold; }
+.field-error { display: block; color: var(--brown); font-weight: bold; margin-top: .5rem; }
+.field-error:empty, #form-status:empty { display: none; }
+[aria-invalid="true"] { border: 3px solid var(--brown); }
+#form-status { padding: 1rem; border-left: 4px solid var(--brown); background: var(--peach); }
+#form-status:focus { outline: 3px solid var(--brown); outline-offset: 3px; }
+@media (min-width: 48rem) { .favorite-choices { flex-direction: row; } }

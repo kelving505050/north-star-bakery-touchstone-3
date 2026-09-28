@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Breads, Pastries, and Cakes | North Star Bakery</title>
 <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body class="products-page">
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -25,6 +26,18 @@
     <h1>Breads, Pastries, and Cakes</h1>
     <p>Find something for breakfast, a shared meal, or a celebration.
       Prices below are sample ranges; an inquiry is not an order.</p>
+    <section id="favorites-panel" class="favorites-panel" aria-labelledby="favorites-heading" hidden>
+      <h2 id="favorites-heading">Remember your bakery favorites</h2>
+      <p>Save a few ideas for your next visit. Your choices stay in this browser; they do not reserve products or place an order.</p>
+      <div id="favorite-choices" class="favorite-choices"></div>
+      <h3>Your favorites (<span id="favorites-count">0</span>)</h3>
+      <p id="favorites-empty">No favorites saved yet.</p>
+      <ul id="favorites-list"></ul>
+      <button id="clear-favorites" type="button">Clear favorites</button>
+      <p id="favorites-status" role="status" aria-live="polite"></p>
+      <p><a href="contact.html#favorites-panel">View your favorites while planning an inquiry</a>.</p>
+    </section>
+    <noscript><p>Enable JavaScript to save favorites. You can still browse all products below.</p></noscript>
     <div class="product-grid">
 <section aria-labelledby="breads" class="product-card bread-card">
       <h2 id="breads">Breads</h2>
