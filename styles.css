@@ -1,0 +1,144 @@
+/* North Star Bakery: mobile-first, four colors, two font families. */
+:root {
+  --cream: #fff8f0;
+  --brown: #6b3e26;
+  --peach: #d88c5a;
+  --charcoal: #2f2a26;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1rem; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+h1, h2, h3 {
+  color: var(--brown);
+  font-family: Georgia, serif;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.35rem, 6vw, 4.75rem); letter-spacing: -.035em; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.3rem; }
+p { margin: 0 0 1.2rem; max-width: 68ch; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .35rem; }
+a { color: var(--brown); text-underline-offset: .22em; }
+a:hover { text-decoration-thickness: .16em; }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, audio:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 4px;
+}
+img { display: block; max-width: 100%; height: auto; }
+audio { display: block; width: 100%; max-width: 30rem; margin-bottom: 1rem; }
+.skip-link {
+  position: absolute; top: .5rem; left: .5rem; z-index: 10;
+  padding: .5rem 1rem; background: var(--cream);
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); }
+.site-header {
+  max-width: 76rem; margin: auto; padding: 1rem 1.25rem;
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  border-bottom: 1px solid var(--peach);
+}
+.brand { flex-shrink: 0; }
+.brand img { width: 112px; }
+.site-nav { width: 100%; }
+.site-nav ul {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem;
+  margin: 0; padding: 0; list-style: none;
+}
+.site-nav li { margin: 0; }
+.site-nav a {
+  display: block; padding: .65rem .8rem; border-radius: .3rem;
+  font-size: .9rem; font-weight: bold; text-decoration: none;
+}
+.site-nav a:hover { background: var(--peach); color: var(--charcoal); }
+.site-nav a[aria-current="page"] { background: var(--brown); color: var(--cream); }
+.page-content { max-width: 76rem; margin: auto; padding: 2rem 1.25rem 3rem; }
+.page-content > section { margin-top: 2.5rem; }
+.hero, .info-grid, .product-grid, .team-grid, .contact-layout {
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.hero > *, .info-grid > *, .product-grid > *,
+.team-grid > *, .contact-layout > * { min-width: 0; }
+.hero { margin-bottom: 2rem; }
+.eyebrow { font-size: .75rem; font-weight: bold; letter-spacing: .17em; color: var(--brown); }
+.hero-copy > p:not(.eyebrow) { font-size: 1.1rem; }
+.hero-copy section { margin-top: 2rem; }
+.hero-copy section h2 { font-size: 1.3rem; }
+.feature-card { border: 1px solid var(--peach); border-radius: .75rem; overflow: hidden; }
+.feature-card picture img { width: 100%; }
+.feature-card h2 { margin: 1.5rem 1.5rem 1rem; font-size: 1.6rem; }
+.feature-card p { margin: 0 1.5rem 1.5rem; }
+.button-link, button {
+  display: inline-block; border: 2px solid var(--brown); border-radius: .35rem;
+  background: var(--brown); color: var(--cream); padding: .8rem 1.1rem;
+  font-family: Arial, sans-serif; font-size: 1rem; font-weight: bold;
+  line-height: 1.4; text-decoration: none; cursor: pointer;
+}
+.button-link:hover, button:hover { background: var(--charcoal); border-color: var(--charcoal); }
+.info-card { padding: 1.5rem; border-top: 3px solid var(--peach); }
+.info-card h2 { font-size: 1.5rem; }
+.product-grid { margin-top: 2rem; }
+.product-card { padding: 1.5rem; border: 1px solid var(--peach); border-radius: .6rem; }
+.product-card > img { width: 100%; max-height: 24rem; object-fit: cover; margin-bottom: 1.25rem; border-radius: .3rem; }
+.signature { margin: 1.5rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--peach); }
+.signature img { width: 100%; max-height: 24rem; object-fit: cover; border-radius: .3rem; }
+figcaption { padding-top: .75rem; font-size: .95rem; }
+.callout { padding: 1.5rem; border-left: 5px solid var(--brown); background: var(--peach); }
+.story-section img { width: 100%; max-height: 32rem; object-fit: cover; border-radius: .6rem; }
+.team-grid article { padding: 1.5rem; border-top: 3px solid var(--peach); }
+.about-page main > p:last-child { margin-top: 2rem; }
+.contact-layout { margin-top: 2rem; align-items: stretch; }
+.visit-card { padding: 1.5rem; background: var(--peach); border-radius: .5rem; }
+.visit-card h2, .visit-card h3, .callout h2 { color: var(--charcoal); }
+address { font-style: normal; margin-bottom: 1.5rem; }
+.form-panel { padding: 1.5rem 0; }
+#demo-note { padding: 1rem; border-left: 3px solid var(--peach); font-size: .9rem; }
+fieldset { min-width: 0; margin: 0 0 1.5rem; padding: 1.25rem; border: 1px solid var(--brown); border-radius: .4rem; }
+legend { padding: 0 .4rem; color: var(--brown); font-weight: bold; }
+label { display: inline-block; margin-bottom: .4rem; font-weight: bold; }
+input, select, textarea {
+  width: 100%; max-width: 100%; min-height: 2.8rem; padding: .7rem;
+  background: var(--cream); color: var(--charcoal); border: 1px solid var(--brown);
+  border-radius: .25rem; font-family: Arial, sans-serif; font-size: 1rem;
+}
+textarea { resize: vertical; }
+#pickup-help, #details-help, #allergy-help { font-size: .9rem; }
+.site-footer { padding: 2rem 1.25rem; background: var(--brown); color: var(--cream); }
+.site-footer p { max-width: 73.5rem; margin: 0 auto .75rem; }
+.site-footer p:first-child { font-family: Georgia, serif; font-size: 1.3rem; }
+.site-footer p:last-child { font-size: .8rem; }
+/* Larger screens: preserve source order while expanding the layout. */
+@media (min-width: 48rem) {
+  .site-header { flex-direction: row; justify-content: space-between; padding: 1rem 2rem; }
+  .site-nav { width: auto; }
+  .site-nav ul { justify-content: flex-end; gap: .5rem; }
+  .page-content { padding: 3.5rem 2rem 4rem; }
+  .hero { flex-direction: row; align-items: center; gap: 3rem; margin-bottom: 3.5rem; }
+  .hero-copy { flex: 1 1 52%; }
+  .feature-card { flex: 1 1 48%; }
+  .info-grid, .team-grid { flex-direction: row; }
+  .info-grid > *, .team-grid > * { flex: 1 1 0; }
+  .product-grid { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+  .product-card { flex: 1 1 calc(50% - 1rem); }
+  .bread-card { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; }
+  .bread-card h2 { flex-basis: 100%; }
+  .bread-card > img { width: 30%; flex: 1 1 30%; margin: 0; }
+  .bread-card > p { flex: 1 1 25%; }
+  .bread-card .signature { flex: 1 1 30%; border: 0; padding: 0; margin: 0; }
+  .contact-layout { flex-direction: row; gap: 3rem; align-items: flex-start; }
+  .visit-card { flex: 0 1 32%; }
+  .form-panel { flex: 1 1 68%; padding: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
